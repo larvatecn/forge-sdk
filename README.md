@@ -19,10 +19,6 @@ To install the SDK in your project you need to require the package via composer:
 composer require larva/forge-sdk
 ```
 
-### Upgrading
-
-When upgrading to a new major version of Forge SDK, it's important that you carefully review [the upgrade guide](https://github.com/laravel/forge-sdk/blob/master/UPGRADE.md).
-
 ### Basic Usage
 
 You can create an instance of the SDK like so:
@@ -35,14 +31,6 @@ Using the `Forge` instance you may perform multiple actions as well as retrieve 
 
 ```php
 $servers = $forge->servers();
-```
-
-This will give you an array of servers that you have access to, where each server is represented by an instance of `Laravel\Forge\Resources\Server`, this instance has multiple public properties like `$name`, `$id`, `$size`, `$region`, and others.
-
-You may also retrieve a single server using:
-
-```php
-$server = $forge->server(SERVER_ID_HERE);
 ```
 
 ## License

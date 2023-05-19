@@ -1,0 +1,46 @@
+{
+    "name": "larva/forge-sdk",
+    "description": "The official Larva Forge PHP SDK.",
+    "keywords": ["larva", "forge"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/larvatecn/forge-sdk/issues",
+        "source": "https://github.com/larvatecn/forge-sdk"
+    },
+    "authors": [
+        {
+            "name": "Larva Team",
+            "email": "support@larva.com.cn"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.3.1|^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3.1",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^8.4|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larva\\Forge\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

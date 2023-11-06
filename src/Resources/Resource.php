@@ -53,10 +53,10 @@ class Resource
     /**
      * Convert the key name to camel case.
      *
-     * @param  string  $key
+     * @param string $key
      * @return string
      */
-    protected function camelCase($key)
+    protected function camelCase(string $key): string
     {
         $parts = explode('_', $key);
 
@@ -77,7 +77,7 @@ class Resource
      * @param  array  $extraData
      * @return array
      */
-    protected function transformCollection(array $collection, $class, array $extraData = [])
+    protected function transformCollection(array $collection, $class, array $extraData = []): array
     {
         return array_map(function ($data) use ($class, $extraData) {
             return new $class($data + $extraData, $this->forge);
@@ -88,10 +88,10 @@ class Resource
      * Transform the collection of tags to a string.
      *
      * @param  array  $tags
-     * @param  string|null  $separator
+     * @param string|null $separator
      * @return string
      */
-    protected function transformTags(array $tags, $separator = null)
+    protected function transformTags(array $tags, string $separator = null): string
     {
         $separator = $separator ?: ', ';
 
